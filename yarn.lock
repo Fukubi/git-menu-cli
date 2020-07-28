@@ -344,6 +344,11 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
+"@lenne.tech/gluegun-menu@^0.0.4":
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/@lenne.tech/gluegun-menu/-/gluegun-menu-0.0.4.tgz#9558f176bb57916056fcf2c8646e51411c851d91"
+  integrity sha512-XpyDlEFntzO1sc5QxiXJ03gZJFmqBpuHGlD5PNoomMgS0EuYfxoitvX7vvmPxflrIsxNKTU54/8c77qCYwFCSQ==
+
 "@types/babel__core@^7.1.0":
   version "7.1.9"
   resolved "https://registry.yarnpkg.com/@types/babel__core/-/babel__core-7.1.9.tgz#77e59d438522a6fb898fa43dc3455c6e72f3963d"
