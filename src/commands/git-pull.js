@@ -9,6 +9,7 @@ module.exports = {
         const remote = await system.run('git remote')
 
         let escolhas = remote.split('\n')
+        
 
         escolhas.pop()
         escolhas.push('Inserir URL')
@@ -26,6 +27,7 @@ module.exports = {
                 const branchs = await system.run('git branch')
 
                 let escolhas = branchs.split('\n')
+                
 
                 escolhas.pop()
                 escolhas.push('Inserir branch')
@@ -41,14 +43,14 @@ module.exports = {
                     info('')
 
                     const spineerUrl = await spin('Atualizando projeto')
-                    await system.run(`git push ${url} ${branchName}`)
+                    await system.run(`git pull ${url} ${branchName}`)
                     spineerUrl.succeed('Projeto atualizado com sucesso')
 
                     return
 
                 } else {
                     const spineerUrl = await spin('Atualizando projeto')
-                    await system.run(`git push ${url} ${branch}`)
+                    await system.run(`git pull ${url} ${branch}`)
                     spineerUrl.succeed('Projeto atualizado com sucesso')
 
                     return
@@ -64,7 +66,8 @@ module.exports = {
             try {
                 const branchs = await system.run('git branch')
 
-                let escolhas = branchs.split('\n')
+                let escolhas = branchs.replace('* ', '').split('\n')
+                info(escolhas)
 
                 escolhas.pop()
                 escolhas.push('Inserir branch')
@@ -80,15 +83,16 @@ module.exports = {
                     info('')
 
                     const spineerUrl = await spin('Atualizando projeto')
-                    await system.run(`git push ${variavel} ${branchName}`)
+                    await system.run(`git pull ${variavel} ${branchName}`)
                     spineerUrl.succeed('Projeto atualizado com sucesso')
 
                     return
 
                 } else {
                     const spineerUrl = await spin('Atualizando projeto')
-                    await system.run(`git push ${variavel} ${branch}`)
+                    await system.run(`git pull ${variavel} ${branch}`)
                     spineerUrl.succeed('Projeto atualizado com sucesso')
+                    info('')
 
                     return
                 }

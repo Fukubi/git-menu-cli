@@ -27,7 +27,7 @@ module.exports = {
 
                 const branchs = await system.run('git branch')
 
-                let escolhas = branchs.split('\n')
+                let escolhas = branchs.replace('* ', '').split('\n')
                 info(escolhas)
 
                 escolhas.pop()
@@ -67,7 +67,7 @@ module.exports = {
             try {
                 const branchs = await system.run('git branch')
 
-                let escolhas = branchs.split('\n')
+                let escolhas = branchs.replace('* ', '').split('\n')
                 info(escolhas)
 
                 escolhas.pop()
@@ -90,11 +90,20 @@ module.exports = {
                     return
 
                 } else {
-                    const spineerPush = await spin('Enviando alterações para o repositório')
-                    await system.run(`git push ${variavel} ${branch}`)
-                    spineerPush.succeed('Alterações enviadas com sucesso')
 
-                    return
+                    if (branch === "master") {
+                        const spineerPush = await spin('Enviando alterações para o repositório')
+                        await system.run(`git push --set-upstream ${variavel} ${branch}`)
+                        spineerPush.succeed('Alterações enviadas com sucesso')
+
+                        return
+                    } else {
+                        const spineerPush = await spin('Enviando alterações para o repositório')
+                        await system.run(`git push ${variavel} ${branch}`)
+                        spineerPush.succeed('Alterações enviadas com sucesso')
+
+                        return
+                    }
                 }
 
 
