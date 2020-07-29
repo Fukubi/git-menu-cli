@@ -13,4 +13,23 @@ Para instala-lo e utiliza-lo é necessário ter o Node.JS e o Yarn instalado e c
 -[Node.JS (RECOMENDO QUE COMECE POR ELE)](https://nodejs.org/en/download/)  
 -[YARN](https://classic.yarnpkg.com/pt-BR/docs/install#windows-stable)
 
-Após ter instalado o Node.JS e o Yarn clone o projeto com o **git clone **
+Após ter instalado o Node.JS e o Yarn clone o projeto com o **git clone https://github.com/Fukubi/git-menu-cli.git**
+Inicie um prompt de comando(Windows) ou terminal(Linux) e navegue até a pasta que foi criada com o git clone utilizando cd  
+
+-- Windows
+```
+cd C:\caminho\da\pasta\criada\com\clone
+```
+-- Linux ou MacOS
+```
+cd caminho/da/pasta/criada/com/o/clone
+```
+
+Após isso execute no prompt de comado ou no terminal os comandos
+
+```
+yarn install
+yarn link git-menu-cli
+```
+
+Após isso o git-menu-cli deve estar disponível para ser utilizado e para utiliza-lo apenas digite **git-menu-cli no prompt de comando ou no terminal**.
