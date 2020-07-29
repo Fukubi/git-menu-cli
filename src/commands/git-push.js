@@ -93,13 +93,13 @@ module.exports = {
 
                     if (branch === "master") {
                         const spineerPush = await spin('Enviando alterações para o repositório')
-                        await system.run(`git push -f --set-upstream ${variavel} ${branch}`)
+                        await system.run(`git push --set-upstream ${variavel} ${branch}`)
                         spineerPush.succeed('Alterações enviadas com sucesso')
 
                         return
                     } else {
                         const spineerPush = await spin('Enviando alterações para o repositório')
-                        await system.run(`git push -f ${variavel} ${branch}`)
+                        await system.run(`git push ${variavel} ${branch}`)
                         spineerPush.succeed('Alterações enviadas com sucesso')
 
                         return
