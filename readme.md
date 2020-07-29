@@ -1,21 +1,8 @@
-# git-menu-cli CLI
+# GIT-MENU-CLI
 
-A CLI for git-menu-cli.
+## SOBRE
 
-## Publishing to NPM
+git-menu-cli é uma cli totalmente controlada de forma interativa feita em JavaScript utilizando Node.js com o pacote Gluegun e Gluegun-menu.
+O principal objetivo dessa cli é facilitar a utilização do git e todos os seus vários comandos.
 
-To package your CLI up for NPM, do this:
-
-```shell
-$ npm login
-$ npm whoami
-$ npm lint
-$ npm test
-(if typescript, run `npm run build` here)
-$ npm publish
-```
-
-# License
-
-MIT - see LICENSE
-
+![alt text](/prints/Main-screen.PNG)
