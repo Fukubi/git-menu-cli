@@ -28,7 +28,6 @@ module.exports = {
                 const branchs = await system.run('git branch')
 
                 let escolhas = branchs.replace('* ', '').split('\n')
-                info(escolhas)
 
                 escolhas.pop()
                 escolhas.push('Inserir branch')
@@ -68,7 +67,6 @@ module.exports = {
                 const branchs = await system.run('git branch')
 
                 let escolhas = branchs.replace('* ', '').split('\n')
-                info(escolhas)
 
                 escolhas.pop()
                 escolhas.push('Inserir branch')
